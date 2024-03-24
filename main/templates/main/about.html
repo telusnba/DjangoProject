@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="row">
+        <h2>WHO WE ARE & WHAT WE DO</h2>
+        <h4>We are the Auto Pride team, we are engaged in repairs of your cars!</h4>
+        <img class="homeAboutImg" src="{% static 'main/img/we.jpg' %}" alt="about">
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>WHY US?</h4>
+            <p>Why is it worth doing a comprehensive diagnosis and repair of the engine in a car service - "Auto Pride"</p>
+            <p>Great experience of craftsmen who regularly undergo training and advanced training, study all the novelties and technological know-how of the market;</p>
+            <p>Availability of modern equipment and tools that are constantly updated in step with the times;</p>
+            <p>Most fluids, consumables, filters and gaskets are in stock or on order with delivery as soon as possible;</p>
+            <p>Average market prices and affordable prices; the golden mean in terms of price/quality ratio;</p>
+            <p>We provide a guarantee for all types of work and spare parts;</p>
+            <p>Round-the-clock video surveillance, built in such a way as to provide full control over the car at all stages of repair, and each post is visible to at least two video cameras;</p>
+            <p>Cumulative system of discounts for regular customers;</p>
+            <p>Safely!</p>
+        </div>
+        <div class="col">
+            <h4>OUR QUALITY</h4>
+            <p>Auto Pride provides a full range of technical services. service and repair of cars of any complexity. We employ highly qualified craftsmen with over 10 years of experience. In our work we use only original spare parts!</p>
+            <ul>
+                <li>We give a guarantee for the work performed;</li>
+                <li>We pass quality certification annually;</li>
+                <li>We carefully study each car;</li>
+                <li>We order spare parts directly from the supplier;</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

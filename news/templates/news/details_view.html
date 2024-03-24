@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+        <h5>&#171;{{ article.title }}&#187;</h5>
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="{% url 'news_update' article.id %}"><button type="button" class="btn btn-dark">Оновити новину</button></a>
+                    <a href="{% url 'news_delete' article.id %}"><button type="button" class="btn btn-danger">Видалити новину</button></a>
+                </div>
+
+            </div>
+    </div>
+{% endblock %}

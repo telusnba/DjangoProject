@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}AUTOPRIDE{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>WELCOME TO AUTO PRIDE</h2>
+            <h4>WHY US?</h4>
+            <h6>{{ title }}</h6>
+            {% for value in values %}
+                {% filter upper %}
+                    <h6>{{ value }}</h6>
+                {% endfilter %}
+            {% endfor %}
+            <p>Extensive experience of craftsmen who regularly undergo training and advanced training, study all the
+                latest and technological know-how of the market; Availability of modern equipment and tools that are
+                constantly updated with the times; Most fluids, consumables, filters and gaskets are in stock or on
+                order with delivery as soon as possible; Average market prices and affordable prices; the golden mean in
+                terms of price / quality ratio; We provide a guarantee for all types of work and spare parts;
+                Round-the-clock video surveillance, built in such a way as to provide full control over the car at all
+                stages of repair, and each post is visible to at least two video cameras; cumulative system of discounts
+                for regular customers; Safely!
+            </p>
+        </div>
+        <div class="col">
+            <img class="homeAboutImg" src="{% static 'main/img/class-4.jpg' %}" alt="home"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

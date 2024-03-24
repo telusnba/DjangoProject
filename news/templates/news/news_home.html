@@ -1,0 +1,29 @@
+{% extends 'news/layout.html' %}
+{% load static %}
+
+{% block title %}Новини{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+        <h5 class="text-center">Новини</h5>
+            {% if news %}
+                {% for new in news %}
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">&#171;{{ new.title }}&#187;</h5>
+                                <p class="card-text">{{ new.anons }}</p>
+                                <p class="card-text">{{ new.date }}</p>
+
+                                <a href="{% url 'news_detail' new.id %}" class="btn btn-primary">Читати</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h6 class="test-center">Новин намає</h6>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

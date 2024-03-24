@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Додавання новини{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h5 class="text-center">Додати новину</h5>
+                <div class="col myForm">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Назва</label>
+                            {{ form.title }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Анонс</label>
+                           {{ form.anons }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Текст</label>
+                            {{ form.full_text }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Дата</label>
+                            {{ form.date }}
+                        </div>
+                        <span>{{ error }}</span><br>
+                        <button type="submit" class="btn btn-success position-absolute start-50 translate-middle">Додати</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+{% endblock %}
